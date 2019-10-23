@@ -6,10 +6,8 @@ export const ImportOrderList = (props) => (
         <Datagrid>
             <TextField source="supplierId" />
             <TextField source="status" />
-            <TextField source="total" />
+            <TextField source="subtotal" />
             <TextField source="createdAt" />
-            <TextField source="relations.supplier" />
-            <TextField source="relations.books" />
             <EditButton/>
         </Datagrid>
     </List>
@@ -20,10 +18,8 @@ export const ImportOrderEdit = (props) => (
         <SimpleForm>
             <DisabledInput source="supplierId" />
             <TextInput source="status" />
-            <TextInput source="total" />
+            <TextInput source="subtotal" />
             <TextInput source="createdAt" />
-            <TextInput source="relations.supplier" />
-            <TextInput source="relations.books" />
         </SimpleForm>
     </Edit>
 );
@@ -31,10 +27,8 @@ export const ImportOderCreate = (props) => (
     <Create {...props}>
         <SimpleForm>
         <TextInput source="status" />
-        <TextInput source="total" />
+        <TextInput source="subtotal" />
         <TextInput source="createdAt" />
-        <TextInput source="relations.supplier" />
-        <TextInput source="relations.books" />
         </SimpleForm>
     </Create>
 );

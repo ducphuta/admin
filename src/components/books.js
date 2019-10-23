@@ -1,6 +1,11 @@
 import React from 'react';
-import { List, Datagrid, Edit, Create, SimpleForm, DateField, TextField, EditButton, DisabledInput, TextInput, LongTextInput, DateInput } from 'react-admin';
+import { List, Datagrid, Edit, Create, SimpleForm, DateField, TextField, EditButton, DisabledInput, TextInput, LongTextInput, DateInput, SelectInput } from 'react-admin';
 
+const choices = [
+    { _id: 1, category: 'Khoa học' },
+    { _id: 2, category: 'Thiếu nhi' },
+    { _id: 3, category: 'Võ thuật'}
+];
 export const BookList = (props) => (
     <List {...props}>
         <Datagrid>
@@ -40,7 +45,7 @@ export const BookCreate = (props) => (
         <SimpleForm>
             <DisabledInput source="uid" />
             <TextInput source="name" />
-            <TextInput source="categoryId" />
+            <SelectInput source="categoryId" choices={choices} optionText="category" optionValue="_id"/>
             <TextInput source="description" />
             <TextInput source="imgURL" />
             <TextInput source="publisher" />
